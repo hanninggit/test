@@ -1,36 +1,35 @@
 spring:
-    profiles:
-        active: dev
+  profiles:
+    active: dev
 
 ---
 
 spring:
-    profiles: dev
-    application:
-        name: eureca-server
+  profiles: dev
+  application:
+    name: eureca-server
 server:
-    port: 8761
+  port: 8761
 
 eureka:
-    client:
-        register-with-eureka: false
-        fetch-registry: false
-    instance:
-        hostname: eureka1
-#设置eureka实例名称，与配置文件的变量为主
-    
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka1
+
 
 ---
 spring:
-    profiles: dev
-    application:
-        name: eureca-server
+  profiles: test
+  application:
+    name: eureca-server
 server:
-    port: 8762
+  port: 8762
 
 eureka:
-    client:
-        register-with-eureka: false
-        fetch-registry: false
-    instance:
-        hostname: eureka1
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: eureka1
