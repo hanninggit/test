@@ -10,4 +10,4 @@ server:
 spring:
   profiles: test
 server:
-  port: 3333
+  port: 5555
