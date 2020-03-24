@@ -1,7 +1,9 @@
 spring:
     profiles:
         active: dev
+
 ---
+
 spring:
     profiles: dev
     application:
@@ -12,19 +14,15 @@ server:
 eureka:
     client:
         register-with-eureka: false
-
-eureka:
-    client:
         fetch-registry: false
-
-#设置eureka实例名称，与配置文件的变量为主
-eureka:
     instance:
         hostname: eureka1
+#设置eureka实例名称，与配置文件的变量为主
+    
 
 ---
 spring:
-    profiles: test
+    profiles: dev
     application:
         name: eureca-server
 server:
@@ -33,12 +31,6 @@ server:
 eureka:
     client:
         register-with-eureka: false
-
-eureka:
-    client:
         fetch-registry: false
-
-#设置eureka实例名称，与配置文件的变量为主
-eureka:
     instance:
         hostname: eureka1
